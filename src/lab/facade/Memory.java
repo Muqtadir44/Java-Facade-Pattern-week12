@@ -1,6 +1,11 @@
 package lab.facade;
+
 public class Memory {
-public void load(long position, byte[] data) {
-System.out.println("Memory: loading " + data.length + " bytes at " + position);
-}
+
+    public static int loads = 0;
+
+    public void load(long position, byte[] data) {
+        loads++;
+        System.out.println("Memory: loading " + data.length + " bytes at " + position);
+    }
 }

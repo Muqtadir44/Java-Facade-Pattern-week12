@@ -39,7 +39,13 @@ public class ComputerFacade {
     }
 
     public void shutdown() {
-        System.out.println("Facade: shutting down computer");
-        System.out.println("Facade: power off\n");
+    System.out.println("Facade: shutting down computer");
+    System.out.println("Report:");
+    System.out.println("Memory loads = " + Memory.loads);
+
+    if (hd instanceof Ssd) System.out.println("SSD reads = " + Ssd.reads);
+    if (hd instanceof Hdd) System.out.println("HDD reads = " + Hdd.reads);
+
+    System.out.println("Facade: power off\n");
     }
 }
